@@ -1,10 +1,27 @@
 package lab8;
 
 public class CaixaAlta implements Formatacao {
-	public CaixaAlta() {}
 
-	@Override
-	public String formata (String msg) {
-		return msg.toUpperCase();
+
+	private String txt;
+
+	public CaixaAlta(String txt) {
+		this.txt = txt;
 	}
-}	
+	
+	@Override
+	public String formatar() {
+		String imprime = txt.toUpperCase();
+		return imprime;
+	}
+
+	public String getTxt() {
+		return txt;
+	}
+
+	public void setTxt(String txt) {
+		this.txt = txt;
+	}
+	
+	
+}
